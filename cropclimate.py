@@ -14,7 +14,7 @@ def climate(input_numbers):
     input_list.append(input_numbers['Air_Temp'])
     input_list.append(input_numbers['Soil_pH'])
     input_list.append(89)  # rainfall value
-    print(input_list)
+    #print(input_list)
     if (input_numbers['label'] == "rice"):
         input_list.append(1)
         input_list.append(0)
@@ -32,7 +32,7 @@ def climate(input_numbers):
     input_list = input_list.reshape((1, 5))
     input_list = np.matrix(input_list)
 
-    json_file = open('', 'r')
+    json_file = open('C:/Users/ritik/Mini Project/modelc.json', 'r')
     loaded_model_json = json_file.read()
     json_file.close()
 
@@ -40,7 +40,7 @@ def climate(input_numbers):
     graph = tf.compat.v1.get_default_graph()
     with graph.as_default():
         loaded_model = model_from_json(loaded_model_json)
-        loaded_model.load_weights("C:/Users/ritik/Mini Project/modelc.json")
+        loaded_model.load_weights("C:/Users/ritik/Mini Project/modelcli.h5")
 
         loaded_model.compile(loss='mean_absolute_error', optimizer='adam', metrics=['mean_absolute_error'])
 

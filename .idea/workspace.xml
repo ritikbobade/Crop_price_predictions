@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22da973d-b7bf-449d-bbb6-91db95520e4a" name="Default Changelist" comment="" />
+    <list default="true" id="22da973d-b7bf-449d-bbb6-91db95520e4a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Crop-Predictions-Climate-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Crop-Predictions-Climate-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Prediction-Geographical -checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Prediction-Geographical -checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crop-Predictions-Climate.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Crop-Predictions-Climate.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prediction-Geographical .ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Prediction-Geographical .ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.h5" beforeDir="false" afterPath="$PROJECT_DIR$/demo.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.json" beforeDir="false" afterPath="$PROJECT_DIR$/model.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model1.h5" beforeDir="false" afterPath="$PROJECT_DIR$/model1.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelc.json" beforeDir="false" afterPath="$PROJECT_DIR$/modelc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelcli.h5" beforeDir="false" afterPath="$PROJECT_DIR$/modelcli.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rainfall.csv" beforeDir="false" afterPath="$PROJECT_DIR$/rainfall.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/climate_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/climate_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,8 +32,12 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="30e066bb-3d0b-49d5-b34f-0f9a14e05ee1" />
   <component name="ProjectId" id="1ra4UPDOrZtZiOUuLxEBkWZAlTP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -26,6 +45,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
@@ -188,6 +208,7 @@
       <workItem from="1619584286518" duration="6052000" />
       <workItem from="1619590577417" duration="78000" />
       <workItem from="1619591123359" duration="284000" />
+      <workItem from="1619672038205" duration="1366000" />
     </task>
     <servers />
   </component>
@@ -215,22 +236,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1619589499977" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1619590557606">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1619673416083">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1619590557606" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1619590557605">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1619673416083" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1619673416083">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1619590557605" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1619590557605">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1619673416083" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1619673416083">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1619590557605" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1619590557605">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1619673416083" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1619673416083">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1619590557605" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1619673416083" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1619535472750">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -254,7 +275,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Mini_Project$cropmodel.coverage" NAME="cropmodel Coverage Results" MODIFIED="1619535044007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mini_Project$app.coverage" NAME="app Coverage Results" MODIFIED="1619587899594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mini_Project$app.coverage" NAME="app Coverage Results" MODIFIED="1619672780135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mini_Project$cropwebmodel.coverage" NAME="cropwebmodel Coverage Results" MODIFIED="1619266298632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mini_Project$cropclimate.coverage" NAME="cropclimate Coverage Results" MODIFIED="1619586203454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mini_Project$demoflask.coverage" NAME="demoflask Coverage Results" MODIFIED="1619333013924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

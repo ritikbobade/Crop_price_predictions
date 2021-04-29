@@ -17,9 +17,9 @@ def climate_index():
 def climate_result():
     if request.method == 'POST':
         climate_result = request.form
-        cli_output=climate(climate_result)
-        print(cli_output)
-        return render_template("climate_result.html",result=climate_result,output=cli_output)
+        output=climate(climate_result)
+        print(output)
+        return render_template("climate_result.html",result=climate_result,output=output)
 
 
 if __name__ == '__main__':
