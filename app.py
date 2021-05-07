@@ -4,6 +4,7 @@ from keras import backend as K
 from flask import *
 from cropmodel import prediction
 from cropclimate import climate 
+from historic import history
 
 app = Flask(__name__, template_folder='template')
 K.clear_session()
@@ -26,8 +27,8 @@ def result():
     if request.method == 'POST':
         result = request.form
         print(result)
-        output = prediction(result)
-        print(output)
+        outputn = prediction(result)
+        output=str(outputn).lstrip('[').rstrip(']')
         return render_template("result.html", result=result, output=output)
 
 @app.route('/climate')
@@ -40,8 +41,23 @@ def climate_result():
     if request.method == 'POST':
         climate_result = request.form
         outputn=climate(climate_result)
-        output= outputn + 100
+        output1= outputn + 100
+        output=str(output1).lstrip('[').rstrip(']')
         return render_template("result.html",result=climate_result,output=output)        
+
+@app.route('/historic')
+def historic():
+    return render_template('previousdataset.html')
+
+@app.route('/historic', methods=['POST','GET'])
+def his_result():
+    if request.method == 'POST':
+        his_result = request.form
+        outputn=history(his_result)
+        output1= outputn + 100
+        output=str(output1).lstrip('[').rstrip(']')
+        return render_template("result.html",result=climate_result,output=output)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

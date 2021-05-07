@@ -8,7 +8,7 @@ from keras.models import model_from_json
 
 K.clear_session()
 
-def historic(input_numbers):
+def history(input_numbers):
     
     input_list=[]
     input_list.append(input_numbers['Year'])

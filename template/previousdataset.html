@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Prediction on Previous Dataset</title>
-<!-- Meta tag Keywords -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-<meta name="keywords" content=" volunteer enrollment form Widget a Flat Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+	<title>Prediction on Previous Dataset</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="keywords"
+		content=" volunteer enrollment form Widget a Flat Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Meta tag Keywords -->
-<link rel="stylesheet" href="../static/css/geography-style.css" type="text/css" media="all" /><!-- Style-CSS -->
-<link href="//fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+	<!-- Meta tag Keywords -->
+	<link rel="stylesheet" href="../static/css/geography-style.css" type="text/css" media="all" /><!-- Style-CSS -->
+	<link href="//fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Exo" rel="stylesheet">
 </head>
+
 <body>
 	<section class="agile-volt">
 		<div class="agile-voltheader">
@@ -20,14 +23,15 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>
 		<div class="agile-voltsub">
 			<!-- <h2>volunteer form</h2> -->
-				<form action="#" method="post">
-					<div class="agile-name">
-						<p>State</p>
-						<select required>
-							<option value="state">Maharashtra</option>
-						</select>
-					</div>
-					<div class="clear"></div>
+			<form action="http://localhost:5000/historic" method="POST">
+				<div class="agile-name">
+					<p>State</p>
+					<input type="text" name="State" list="State">
+					<datalist id="State">
+						<option>Maharashtra</option>
+					</datalist>
+				</div>
+				<!-- <div class="clear"></div>
 					<div class="agile-email">
 						<p>District</p>
 						<select required>
@@ -69,80 +73,84 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<option value="district">Satara</option>
 							<option value="district">Kolhapur</option>
 						</select>
-					</div>
-					<div class="clear"></div>
-					<div class="agile-address">
-						<p>Crop</p>
-						<select required>
-							<option value="crop" hidden>Please Select</option>
-							<option value="crop">Arhar</option>
-							<option value="crop">Bajra</option>
-							<option value="crop">Barley</option>
-							<option value="crop">Copra</option>
-							<option value="crop">Cotton</option>
-							<option value="crop">Gram</option>
-							<option value="crop">Groundnut</option>
-							<option value="crop">Jowar</option>
-							<option value="crop">Jute</option>
-							<option value="crop">Maize</option>
-							<option value="crop">Masoor</option>
-							<option value="crop">Moong</option>
-							<option value="crop">Niger</option>
-							<option value="crop">Paddy</option>
-							<option value="crop">Ragi</option>
-							<option value="crop">Rapeseed</option>
-							<option value="crop">Safflower</option>
-							<option value="crop">Sesamum</option>
-							<option value="crop">Soyabean</option>
-							<option value="crop">Sugarcane</option>
-							<option value="crop">Sunflower</option>
-							<option value="crop">Urad</option>
-							<option value="crop">Wheat</option>
-						</select>
-					</div>
-					<div class="clear"></div>
-					<div class="agile-city">
-						<p>Year</p>
-						<select required>
-							<option value="year" hidden>Please select</option>
-							<option value="year">2012</option>
-							<option value="year">2013</option>
-							<option value="year">2014</option>
-							<option value="year">2015</option>
-							<option value="year">2016</option>
-							<option value="year">2017</option>
-							<option value="year">2018</option>
-							<option value="year">2019</option>
-							<option value="year">2020</option>
-							<option value="year">2021</option>
-							<option value="year">2022</option>
-							<option value="year">2023</option>
-						</select>
-					</div>
-					<div class="clear"></div>
-					<div class="agile-state">
-						<p>Month</p>
-						<select required>
-							<option value="month" hidden>Please select</option>
-							<option value="year">January</option>
-							<option value="year">February</option>
-							<option value="year">March</option>
-							<option value="year">April</option>
-							<option value="year">May</option>
-							<option value="year">June</option>
-							<option value="year">July</option>
-							<option value="year">August</option>
-							<option value="year">September</option>
-							<option value="year">October</option>
-							<option value="year">November</option>
-							<option value="year">December</option>
-						</select>
-					</div>
-
-				</form>
-					<div class="clear"></div>
-					<a href="result.html"><input type="submit" value="submit" /></a>
-		</div>
+					</div> -->
+				<div class="clear"></div>
+				<div class="agile-address">
+					<p>Crop</p>
+					<input type="text" name="Crop" list="Crop">
+					<datalist id="Crop">
+						<option  hidden>Please Select</option>
+						<option >Arhar</option>
+						<option >Bajra</option>
+						<option >Barley</option>
+						<option >Copra</option>
+						<option >Cotton</option>
+						<option >Gram</option>
+						<option >Groundnut</option>
+						<option >Jowar</option>
+						<option >Jute</option>
+						<option >Maize</option>
+						<option >Masoor</option>
+						<option >Moong</option>
+						<option >Niger</option>
+						<option >Paddy</option>
+						<option >Ragi</option>
+						<option >Rapeseed</option>
+						<option >Safflower</option>
+						<option >Sesamum</option>
+						<option >Soyabean</option>
+						<option >Sugarcane</option>
+						<option >Sunflower</option>
+						<option >Urad</option>
+						<option >Wheat</option>
+					</datalist>
+				</div>
+				<div class="clear"></div>
+				<div class="agile-city">
+					<p>Year</p>
+					<input type="number" name="Year" list="Year">
+					<datalist id="Year">
+						<option  hidden>Please select</option>
+						<option >2012</option>
+						<option >2013</option>
+						<option >2014</option>
+						<option >2015</option>
+						<option >2016</option>
+						<option >2017</option>
+						<option >2018</option>
+						<option >2019</option>
+						<option >2020</option>
+						<option >2021</option>
+						<option >2022</option>
+						<option >2023</option>
+					</datalist>
+				</div>
+				<div class="clear"></div>
+				<div class="agile-state">
+					<p>Month</p>
+					<input type="number" name="Month" list="Month">
+					<datalist id="Month">
+						<option  hidden>Please select</option>
+						<option >January</option>
+						<option >February</option>
+						<option >March</option>
+						<option >April</option>
+						<option >May</option>
+						<option >June</option>
+						<option >July</option>
+						<option >August</option>
+						<option >September</option>
+						<option >October</option>
+						<option >November</option>
+						<option >December</option>
+					</datalist>
+				</div>
+				<div class="clear"></div>
+				<input type="submit" value="submit" />
+			</div>
+			</form>
+			<
 	</section>
 </body>
+
 </html>
