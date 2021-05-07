@@ -12,7 +12,7 @@ def climate(input_numbers):
 
     input_list=[]
     input_list.append(input_numbers['Air_Temp'])
-    input_list.append(input_numbers['Soil_pH'])
+    input_list.append(input_numbers['Air_Humidity'])
     input_list.append(89)  # rainfall value
     #print(input_list)
     if (input_numbers['label'] == "rice"):
