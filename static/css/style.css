@@ -49,26 +49,6 @@ body{
   cursor: pointer;
 }
 
-.button1 {
-  background-color: transparent;
-  color: white;
-  border: 2px solid #FAEE0D;
-}
-.button1:hover {
-  background-color: #FAEE0D;
-  color: white;
-}
-
-.button2 {
-  background-color: transparent;
-  color: #fffdfd;
-  border: 2px solid #4CAF50;
-}
-.button2:hover {
-  background-color: #4CAF50;
-  color: #fffdfd;
-}
-
 .header {
   background: url("../images/Banner3.jpg")no-repeat 0px 0px;
   background-size:cover;

@@ -32,6 +32,15 @@ body{
 	background-size: cover;
 	background-position: 50% 50%;
 }
+.btn {
+	border: none; 
+	color: white; 
+	padding: 14px 28px; 
+	cursor: pointer; 
+  }
+  
+  .success {background-color: black;} 
+  .success:hover {background-color: green;}
 .w3-main {
     width: 20%;
     margin: 0 auto;
@@ -126,7 +135,7 @@ input[type="submit"] {
 	background-color: black;
 }
 input[type="submit"]:hover{
-	color: rgb(223, 238, 20);
+	color: white;
 	/* background: #0099F7;  fallback for old browsers */
 	/* background: -webkit-linear-gradient(to right, #F11712, #0099F7);  Chrome 10-25, Safari 5.1-6 */
 	/* background: linear-gradient(to left, #F11712, #0099F7); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
