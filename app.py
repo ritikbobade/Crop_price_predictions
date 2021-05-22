@@ -2,6 +2,7 @@ from flask import Flask, render_template, request,url_for,session,redirect
 from keras import backend as K
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
+from wtforms import Form, BooleanField, StringField, PasswordField, validators
 import bcrypt
 from flask import *
 from cropmodel import prediction
@@ -76,14 +77,14 @@ def login_index():
 @app.route('/login1', methods=['POST'])
 def login():
     users = mongo.db.users
-    login_user = users.find_one({'name': request.form['username']})
+    login_user = users.find_one({'name': request.form['username']} )
     print(login_user)
     if login_user:
         if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password']) == login_user['password']:
             session['username'] = request.form['username']
             return redirect(url_for('login_index'))
 
-    return 'Invalid username or password'
+    return 'Invalid username or password!'
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -95,7 +96,7 @@ def register():
             hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
             users.insert({'name':request.form['username'], 'password': hashpass})
             session['username'] =  request.form['username']
-            return redirect(url_for('index'))
+            return redirect(url_for('login_index'))
 
         return 'That username already exists!'
 

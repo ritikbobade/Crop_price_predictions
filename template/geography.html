@@ -14,12 +14,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<link rel="stylesheet" href="../static/css/geography-style.css" type="text/css" media="all" /><!-- Style-CSS -->
 	<link href="//fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 
 <body>
 	<section class="agile-volt">
 		<div class="agile-voltheader">
 			<h1><label style="color: forestgreen;">Geographical Prediction</label></h1>
+		</div>
+		<div>
+
 		</div>
 		<div class="agile-voltsub">
 			<!-- <h2>volunteer form</h2> -->
@@ -132,17 +136,34 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<div class="agile-state">
 					<p>Month</p>
 					<div class="form-group">
-						<label class="control-label col-sm-2" for="Month">Month:</label>
+						<!-- <label class="control-label col-sm-2" for="Month">Month:</label> -->
 						<div class="col-sm-10">
 							<input type="number" class="form-control" id="Month" placeholder="Enter Month" name="Month"
-								min="1" max="12">
+								min="1" max="12" style="
+								/* padding-right: 0px; */
+								/* margin-right: -13px; */
+								width: 470px;
+							">
 						</div>
 					</div>
 				</div>
 				<div class="clear"></div>
 				<a href="http://localhost:5000/result"><input type="submit" value="submit" /></a>
-				<div class="clear"></div>
-				<a href="http://localhost:5000"><input type="submit" value="Back to home" /></a>
+				<div>
+					<a class="btn btn-success" href="http://localhost:5000" role="button" style="
+					/* margin: 18px 150px; */
+					/* padding: 0px 32px; */
+					margin-left: 128px;
+					margin-top: 25px;
+					padding-right: 42px;
+					padding-left: 68px;
+					/* text-align: center; */
+				">Back To Home</a>
+				</div>
+				<!-- <div class="clear"></div>
+				<a href="http://localhost:5000"><button class="btn success">Back to home</button></a> -->
+
+		</div>
 		</div>
 		</form>
 
