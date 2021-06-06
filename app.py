@@ -5,6 +5,7 @@ from pymongo import MongoClient
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
 import bcrypt
 from flask import *
+from flask import session
 from cropmodel import prediction
 from cropclimate import climate 
 from historic import history
@@ -78,13 +79,19 @@ def login_index():
 def login():
     users = mongo.db.users
     login_user = users.find_one({'name': request.form['username']} )
-    print(login_user)
+    print( request.form['username'] )
+    logged_user=request.form['username']
     if login_user:
         if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password']) == login_user['password']:
             session['username'] = request.form['username']
-            return redirect(url_for('login_index'))
+            return render_template("index.html")
 
     return 'Invalid username or password!'
+
+@app.route('/logout')
+def logout():
+    session.pop('username',None)
+    return redirect(url_for('index'))
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -101,6 +108,7 @@ def register():
         return 'That username already exists!'
 
     return render_template('signup.html')
+
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'

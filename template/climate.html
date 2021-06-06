@@ -10,6 +10,18 @@
 		content=" volunteer enrollment form Widget a Flat Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="text/javascript">
+	function validate(){
+		var label = document.getElementById("label");
+		var Air_Temp = document.getElementById("Air_Temp");
+		var Air_Humidity= document.getElementById("Air_Humidity");
+		var Rainfall = document.getElementById("Rainfall");
+		if(label.value.trim()==''|| Air_Temp.value.trim()=='' || Air_Humidity.value.trim()=='' || Rainfall.value.trim()==''){
+			alert("Cannot be blank");
+			return false;
+		}else{ true }
+	}
+	</script>
 	<!-- Meta tag Keywords -->
 	<link rel="stylesheet" href="../static/css/geography-style.css" type="text/css" media="all" /><!-- Style-CSS -->
 	<link href="//fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
@@ -23,10 +35,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<h1><label style="color: forestgreen;">Climatic Prediction</label></h1>
 		</div>
 		<div class="agile-voltsub">
-			<!-- <h2>volunteer form</h2> -->
-			<form action="#" method="post">
+			<form onsubmit="return validate()" class="form" id="form" action="http://localhost:5000/climate" method="POST">
 				<!-- <div class="agile-name">
-						<p>State</p>
+						<label>State</label>
 						<select required>
 							<option value="state">Maharashtra</option>
 						</select>
@@ -74,12 +85,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<option value="district">Kolhapur</option>
 						</select>
 					</div> -->
-				<div class="clear"></div>
+				<!-- <div class="clear"></div> -->
 				<div class="agile-address">
-					<p>Crop</p>
-					<input type="text" name="label" list="label">
+					<label style="color: cornsilk;">Crop</label>
+					<input type="text" name="label" id="label" list="label">
 					<datalist id="label">
-						<option  hidden>Please Select</option>
+						<!-- <option  hidden>Please Select</option> -->
 						<option >Arhar</option>
 						<option >Bajra</option>
 						<option >Barley</option>
@@ -144,37 +155,40 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						</select>
 
 					</div> -->
-				<div class="agile-name">
-					<p>Temperature</p>
+				<div class="agile-name" style="margin-top: 20px;">
+					<label style="color: cornsilk;">Temperature (in celsius)</label>
 					<input type="number" name="Air_Temp" id="Air_Temp">
 				</div>
-				<div class="agile-name">
-					<p>Air Humidity</p>
+				<div class="agile-name" style="margin-top: 20px;">
+					<label style="color: cornsilk;">Air Humidity</label>
 					<input type="number" name="Air_Humidity" id="Air_Humidity">
 				</div>
-				<div class="agile-name">
-					<p>Rainfall</p>
+				<div class="agile-name" style="margin-top: 20px;">
+					<label style="color: cornsilk;">Rainfall (in mm/hour)</label>
 					<input type="number" name="Rainfall" id="Rainfall">
 				</div>
 
-				<div class="clear"></div>
-				<a href="http://localhost:5000/result"><input type="submit" value="submit" /></a>
-				<!-- <div class="clear"></div> -->
+				<a style="text-decoration: none;" href="http://localhost:5000/result"><input type="submit" value="submit" /></a>
 				
 
+				<a href="http://localhost:5000" style="margin-left: auto;
+				margin-top: 2em;
+				margin-right: auto;
+				margin-bottom: 0;
+				padding-right: 0.5em;
+				padding-left: 0.5em; 
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+				text-align: center;
+				background: #227c22;
+				border-radius: 4px;
+				border: 2px solid #227c22;
+				display: block;
+				color: cornsilk;
+				letter-spacing: 2px;
+				text-decoration: none;
+				width: 45%;" role="button">Back to Home</a>
 			</form>
-			<div>
-				<a class="btn btn-success" href="http://localhost:5000" role="button" style="
-				/* margin: 18px 150px; */
-				/* padding: 0px 32px; */
-				margin-left: 128px;
-				margin-top: 25px;
-				padding-right: 42px;
-				padding-left: 68px;
-				/* text-align: center; */
-			">Back To Home</a>
-			</div>
-
 		</div>
 	</section>
 </body>

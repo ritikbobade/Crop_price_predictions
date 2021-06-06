@@ -10,6 +10,18 @@
 		content=" volunteer enrollment form Widget a Flat Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="text/javascript">
+	function validate(){
+		var State = document.getElementById("State");
+		var Crop = document.getElementById("Crop");
+		var Year = document.getElementById("Year");
+		var Month = document.getElementById("Month");
+		if(State.value.trim()==''|| Crop.value.trim()=='' || Year.value.trim()=='' || Month.value.trim()==''){
+			alert("Cannot be blank");
+			return false;
+		}else{ true }
+	}
+	</script>
 	<!-- Meta tag Keywords -->
 	<link rel="stylesheet" href="../static/css/geography-style.css" type="text/css" media="all" /><!-- Style-CSS -->
 	<link href="//fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
@@ -23,11 +35,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<h1><label style="color: forestgreen;">Prediction on Previous Datasets</label></h1>
 		</div>
 		<div class="agile-voltsub">
-			<!-- <h2>volunteer form</h2> -->
-			<form action="http://localhost:5000/historic" method="POST">
+			<form onsubmit="return validate()" class="form" id="form" action="http://localhost:5000/historic" method="POST">
 				<div class="agile-name">
-					<p>State</p>
-					<input type="text" name="State" list="State">
+					<label style="color: cornsilk;">State</label>
+					<input type="text" name="State" id="State" list="State">
 					<datalist id="State">
 						<option>Maharashtra</option>
 					</datalist>
@@ -75,12 +86,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<option value="district">Kolhapur</option>
 						</select>
 					</div> -->
-				<div class="clear"></div>
-				<div class="agile-address">
-					<p>Crop</p>
-					<input type="text" name="Crop" list="Crop">
+				<!-- <div class="clear"></div> -->
+				<div class="agile-address" style="margin-top: 20px;">
+					<label style="color: cornsilk;">Crop</label>
+					<input type="text" name="Crop" id="Crop" list="Crop">
 					<datalist id="Crop">
-						<option  hidden>Please Select</option>
 						<option >Arhar</option>
 						<option >Bajra</option>
 						<option >Barley</option>
@@ -106,12 +116,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<option >Wheat</option>
 					</datalist>
 				</div>
-				<div class="clear"></div>
-				<div class="agile-city">
-					<p>Year</p>
-					<input type="number" name="Year" list="Year">
+
+				<!-- <div class="clear"></div> -->
+				<div class="agile-city" style="margin-top: 20px;">
+					<label style="color: cornsilk;">Year</label>
+					<input type="number" min="2012" max="2023" id="Year" name="Year" list="Year">
 					<datalist id="Year">
-						<option  hidden>Please select</option>
 						<option >2012</option>
 						<option >2013</option>
 						<option >2014</option>
@@ -126,45 +136,51 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<option >2023</option>
 					</datalist>
 				</div>
-				<div class="clear"></div>
-				<div class="agile-state">
-					<p>Month</p>
-					<input type="number" name="Month" list="Month">
+
+				<!-- <div class="clear"></div> -->
+				<div class="agile-state" style="margin-top: 20px;">
+					<label style="color: cornsilk;">Month</label>
+					<input type="number" id="Month" name="Month" min="1" max="12" list="Month">
 					<datalist id="Month">
-						<option  hidden>Please select</option>
-						<option >January</option>
-						<option >February</option>
-						<option >March</option>
-						<option >April</option>
-						<option >May</option>
-						<option >June</option>
-						<option >July</option>
-						<option >August</option>
-						<option >September</option>
-						<option >October</option>
-						<option >November</option>
-						<option >December</option>
+						<option >1</option>
+						<option >2</option>
+						<option >3</option>
+						<option >4</option>
+						<option >5</option>
+						<option >6</option>
+						<option >7</option>
+						<option >8</option>
+						<option >9</option>
+						<option >10</option>
+						<option >11</option>
+						<option >12</option>
 					</datalist>
 				</div>
-				<div class="clear"></div>
-				<a href="http://localhost:5000/result"><input type="submit" value="submit" /></a>
-				<!-- <div class="clear"></div>
-				<a href="http://localhost:5000"><input type="submit" value="Back to home" /></a> -->
-				<div>
-					<a class="btn btn-success" href="http://localhost:5000" role="button" style="
-					/* margin: 18px 150px; */
-					/* padding: 0px 32px; */
-					margin-left: 128px;
-					margin-top: 25px;
-					padding-right: 42px;
-					padding-left: 68px;
-					/* text-align: center; */
-				">Back To Home</a>
-				</div>
-			</div>
+
+				<!-- <div class="clear"></div> -->
+				<a style="text-decoration: none;" href="http://localhost:5000/result"><input type="submit" value="submit" /></a>
+
+				<a href="http://localhost:5000" style="margin-left: auto;
+					margin-top: 2em;
+					margin-right: auto;
+					margin-bottom: 0;
+					padding-right: 0.5em;
+					padding-left: 0.5em; 
+					padding-top: 0.5em;
+					padding-bottom: 0.5em;
+					text-align: center;
+					background: #227c22;
+					border-radius: 4px;
+					border: 2px solid #227c22;
+					display: block;
+					color: cornsilk;
+					letter-spacing: 2px;
+					text-decoration: none;
+					width: 45%;" role="button">Back to Home</a>
+			
 			
 			</form>
-			
+		</div>	
 	</section>
 </body>
 

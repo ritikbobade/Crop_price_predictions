@@ -14,6 +14,45 @@ body a{
 	-ms-transition:0.5s all;
 	font-weight:400;
 }
+.form-control{
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+.form-control label{
+	margin-bottom: 5px;
+}
+.form-control input{
+	font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    text-transform: capitalize;
+    padding: 0.8em 0.5em 0.8em;
+	box-sizing:border-box;
+	width: 100%;
+    border: 2px solid #419641;
+	border-radius: 4px;
+    outline: none;
+    /* background: rgba(255, 255, 255, 0.32); */
+	background-color: rgba(29, 28, 27, 0.76);
+    color: #fff;
+}
+.form-control small{
+	visibility: hidden;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.form-control.error small{
+	visibility: visible;
+	color: cornsilk;
+}
+.form-control.success input{
+	border-color: darkgreen;
+}
+.form-control.error input{
+	border-color: darkred;
+} 
 input[type="button"],input[type="submit"],input[type="text"],input[type="password"]{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -119,13 +158,14 @@ input[type="text"],input[type="password"],input[type="number"],input[type="email
     padding: 0.8em 0.5em 0.8em;
 	box-sizing:border-box;
 	width: 100%;
-    border: 2px solid #5acae9;
+    border: 2px solid #419641;
+	border-radius: 4px;
     outline: none;
     background: rgba(255, 255, 255, 0.32);
     color: #fff;
 	
 }
-select {
+/* select {
     font-size: 15px;
     font-weight: 500;
     text-align: center;
@@ -136,8 +176,9 @@ select {
     background: rgba(255, 255, 255, 0.32);
     color: #fff;
     letter-spacing: 2px;
-    border: 2px solid #5acae9;
-}
+    border: 2px solid #419641;
+	border-radius: 4px;
+} */
 .agile-voltheader label {
     color: #00e5ff;
 }
@@ -151,7 +192,7 @@ option {
     border: 2px solid #9e2929;
     letter-spacing: 2px;
 }
-.agile-days span.Monday {
+/* .agile-days span.Monday {
     float: left;
     width: 25%;
 	font-size: 15px;
@@ -227,7 +268,7 @@ option {
     color: #fff;
     letter-spacing: 1px;
 	    padding: 0.5em 0;
-}
+} */
 datalist {
     font-size: 15px;
     font-weight: 500;
@@ -235,12 +276,13 @@ datalist {
     text-transform: capitalize;
     padding: 1em 0 1em;
     width: 100%;
-		margin: 0em 0 1em;
+	margin: 0em 0 1em;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.32);
     color: #fff;
     letter-spacing: 1px;
-    border: 2px solid #5acae9;
+    border: 2px solid #419641;
+	/* border-radius: 4px; */
 }
 .agile-from {
     width: 47%;
@@ -256,10 +298,12 @@ input[type="submit"] {
     font-weight: 500;
     text-align: center;
     text-transform: capitalize;
+	text-decoration: none;
     letter-spacing: 2px;
-    background: rgba(3, 157, 66, 0.93);
-    color: #fff;
+    background: #227c22;
+    color: cornsilk;
     border: none;
+	border-radius: 4px;
     outline: none;
     width: 45%;
     margin: 2em auto 0;
@@ -268,10 +312,11 @@ input[type="submit"] {
 	cursor:pointer;
 }
 input[type="submit"]:hover {
-    background: #b5334a;
+    background: #1a681a;
     color: #fff;
-    transition: 0.5s ease-in;
+    transition: none;
 }
+
 ::-webkit-input-placeholder{
 	color:#fff;
 }
@@ -378,7 +423,7 @@ footer a{
 		width: 92%;
 	}
 }
-@media(max-width:480px){
+/* @media(max-width:480px){
 	.agile-voltheader h1 {
 		font-size: 25px;
 	}
@@ -426,7 +471,7 @@ footer a{
 	.agile-days span.Sunday {
 		width: 50%;
 	}
-}
+} */
 @media(max-width:384px){
 	.agile-voltsub h2 {
 		font-size: 30px;
