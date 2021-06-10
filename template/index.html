@@ -21,7 +21,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		rel='stylesheet' type='text/css'>
 	<script src="../static/js/jquery-1.11.1.min.js"></script>
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<!---- start-smoth-scrolling---->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="../static/js/move-top.js"></script>
 	<script type="text/javascript" src="../static/js/easing.js"></script>
 	<script type="text/javascript">
@@ -76,11 +78,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- //script for menu -->
 				</div>
 				<div class="search">
-					<!-- <li><button class="button button1"><a href="login.html">Login</a></li></button>
-					<li><button class="button button1"><a href="signup.html">SignUp</a></li></button> -->
-					<a href="http://localhost:5000/login"><button type="button" class="btn btn-warning btn-rounded">Log In</button>
-					</a>
-					<a href="http://localhost:5000/register"><button type="button" class="btn btn-warning btn-rounded">Sign Up</button>
+					<div class="btn-group">
+						<button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
+							aria-expanded="false" style="
+    font-size: 15px;
+">
+							{{session['username']}}
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="http://localhost:5000/login">Login
+									as{{session['username']}}</a></li>
+							<li><a class="dropdown-item" href="http://localhost:5000/logout">Logout</a></li>
+							<!-- <li><a class="dropdown-item" href="#">Something else here</a></li>
+	  <li><hr class="dropdown-divider"></li>
+	  <li><a class="dropdown-item" href="#">Separated link</a></li> -->
+						</ul>
+					</div>
+					<a href="http://localhost:5000/register"><button type="button" class="btn btn-warning btn-rounded"
+							style="
+						font-size: 15px;
+					">Sign Up</button>
 					</a>
 
 				</div>				
