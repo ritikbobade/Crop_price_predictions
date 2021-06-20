@@ -12,11 +12,11 @@
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script type="text/javascript">
 	function validate(){
-		var label = document.getElementById("label");
+		var crop = document.getElementById("crop");
 		var Air_Temp = document.getElementById("Air_Temp");
 		var Air_Humidity= document.getElementById("Air_Humidity");
 		var Rainfall = document.getElementById("Rainfall");
-		if(label.value.trim()==''|| Air_Temp.value.trim()=='' || Air_Humidity.value.trim()=='' || Rainfall.value.trim()==''){
+		if(crop.value.trim()==''|| Air_Temp.value.trim()=='' || Air_Humidity.value.trim()=='' || Rainfall.value.trim()==''){
 			alert("Cannot be blank");
 			return false;
 		}else{ true }
@@ -88,7 +88,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<!-- <div class="clear"></div> -->
 				<div class="agile-address">
 					<label style="color: cornsilk;">Crop</label>
-					<input type="text" name="label" id="label" list="label">
+					<input type="text" name="label" id="crop" list="label">
 					<datalist id="label">
 						<!-- <option  hidden>Please Select</option> -->
 						<option >Arhar</option>

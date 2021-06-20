@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invalid Password</title>
+    <style>
+        body {
+            background-image: url(../static/images/Banner2.jpg);
+            background-size: 1500px 1000px;
+        }
+        div {
+          background-color: #FFFFFFCC;
+          padding: 50px;
+          margin: 20px;
+          border-radius: 5px;
+          text-align: center;
+        }
+        button {
+            background-color: rgb(27, 112, 64);
+            border: none;
+            border-radius: 4px;
+            color: rgb(255, 254, 249);
+            width: 80px;
+            height: 40px;
+            margin-top: 20px;
+            font-size: 15px;
+            transition-duration: 0.2s;
+        }
+        .button:hover{
+            background-color: rgb(19, 94, 51) ;
+            color: black;
+        }
+        .center {
+            margin: auto;
+            margin-top: 10%;
+            width: 30%;
+            /* border: 3px solid rgb(185, 163, 75); */
+            border-radius: 10px;
+            padding: 50px;
+            height: 50%;
+            border: 3px #FFFFFFCC;
+        }
+
+        </style>
+</head>
+<body>
+    <div class="center"> 
+         <!-- style="width:fit-content; height: fit-content; margin: 200 200 200 200; padding: 20 20 20 20; color: seagreen; border: 20px seagreen; border-radius: 5px;  "> -->
+        <p style="color: black; font-size: 30px;"><b>You've entered a wrong password!!</b><p>
+        <a href="http://localhost:5000/login"><button class="button">Try again</button></a>
+    </div>
+</body>
+</html>

@@ -13,10 +13,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script type="text/javascript">
 	function validate(){
 		var State = document.getElementById("State");
-		var Crop = document.getElementById("Crop");
-		var Year = document.getElementById("Year");
-		var Month = document.getElementById("Month");
-		if(State.value.trim()==''|| Crop.value.trim()=='' || Year.value.trim()=='' || Month.value.trim()==''){
+		var Crop1 = document.getElementById("Crop1");
+		var Year1 = document.getElementById("Year1");
+		var Month1 = document.getElementById("Month1");
+		if(State.value.trim()==''|| Crop1.value.trim()=='' || Year1.value.trim()=='' || Month1.value.trim()==''){
 			alert("Cannot be blank");
 			return false;
 		}else{ true }
@@ -89,7 +89,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<!-- <div class="clear"></div> -->
 				<div class="agile-address" style="margin-top: 20px;">
 					<label style="color: cornsilk;">Crop</label>
-					<input type="text" name="Crop" id="Crop" list="Crop">
+					<input type="text" name="Crop" id="Crop1" list="Crop">
 					<datalist id="Crop">
 						<option >Arhar</option>
 						<option >Bajra</option>
@@ -120,7 +120,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<!-- <div class="clear"></div> -->
 				<div class="agile-city" style="margin-top: 20px;">
 					<label style="color: cornsilk;">Year</label>
-					<input type="number" min="2012" max="2023" id="Year" name="Year" list="Year">
+					<input type="number" min="2012" max="2023" id="Year1" name="Year" list="Year">
 					<datalist id="Year">
 						<option >2012</option>
 						<option >2013</option>
@@ -140,7 +140,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<!-- <div class="clear"></div> -->
 				<div class="agile-state" style="margin-top: 20px;">
 					<label style="color: cornsilk;">Month</label>
-					<input type="number" id="Month" name="Month" min="1" max="12" list="Month">
+					<input type="number" id="Month1" name="Month" min="1" max="12" list="Month">
 					<datalist id="Month">
 						<option >1</option>
 						<option >2</option>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request,url_for,session,redirect
+from flask import Flask, render_template, json,request,url_for,session,redirect
 from keras import backend as K
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
@@ -7,7 +7,7 @@ import bcrypt
 from flask import *
 from flask import session
 from cropmodel import prediction
-from cropclimate import climate 
+from cropclimate import climate
 from historic import history
 
 app = Flask(__name__, template_folder='template')
@@ -75,18 +75,18 @@ def login_index():
     return render_template('login.html')
 
 
-@app.route('/login1', methods=['POST'])
+@app.route('/login1', methods=['POST','GET'])
 def login():
     users = mongo.db.users
-    login_user = users.find_one({'name': request.form['username']} )
-    print( request.form['username'] )
-    logged_user=request.form['username']
+    login_user = users.find_one({'name': request.form['username']})
+    print(request.form['username'])
+    logged_user = request.form['username']
     if login_user:
         if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password']) == login_user['password']:
             session['username'] = request.form['username']
             return render_template("index.html")
 
-    return 'Invalid username or password!'
+    return render_template("popup.html")
 
 @app.route('/logout')
 def logout():
@@ -101,11 +101,18 @@ def register():
 
         if existing_user is None:
             hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
-            users.insert({'name':request.form['username'], 'password': hashpass})
-            session['username'] =  request.form['username']
-            return redirect(url_for('login_index'))
+            users.insert({'name': request.form['username'], 'password': hashpass})
+            session['username'] = request.form['username']
+            msg = '{ "html":"ok"}'
+            msghtml = json.loads(msg)
+            # return msg["html"]
+            return msghtml["html"]
+        else:
+            msg = '{ "html":"user"}'
+            msghtml = json.loads(msg)
+            return msghtml["html"]
 
-        return 'That username already exists!'
+        # return 'That username already exists!'
 
     return render_template('signup.html')
 

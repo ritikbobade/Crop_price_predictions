@@ -6,9 +6,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="User Profile Form A Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<!--<script src="" ></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script type="text/javascript">
+	$(function() {
+    $('#submit').click(function() {
+        $.ajax({
+            url: '/register',
+            data: $('form').serialize(),
+            type: 'POST',
+            success: function(response) {
+                
+                $('#w3-main').html(response);
+                if(response == 'ok'){
+					alert("Succesfully Registered")
+                    window.location.href = '/';
+                }
+				if(response=='user'){
+					// console.log(response);
+					alert("Username Already exists")
+					window.location.href='/register';
+				}
+            },
+            error: function(error) {
+                console.log(error);
+                $('#message').html(error);
+            }
+        });
+    });
+});
+	// function check(){
+ //   if(document.getElementById("username").value == "username") {
+ //        return true;
+ //   }
+ //   else {
+ //        alert("Username Already exists")
+ //        return false;
+ //   }
+ // }
 	function validate(){
 		var username = document.getElementById("username");
 		var password = document.getElementById("password");
@@ -35,11 +72,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </div>
 <div class="w3-main">
 		
-			<form onsubmit="return validate()" action="http://localhost:5000/register" method="POST">
+			<form onsubmit="return validate() && check();"  action="http://localhost:5000/register" method="POST">
 				
 				<div class="w3l-email">
 					<span><i class="fa fa-envelope-o w3l-3" aria-hidden="true"></i></span>
-					<input type="email" id="email" name="e-mail" placeholder="info@example.com"/>
+					<input type="email" id="email" name="email" placeholder="info@example.com"/>
 					<div class="clear"></div>
 				</div>
 				
@@ -56,7 +93,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 
 				<div class="w3l-btn">
-					<a href="http://localhost:5000/result"><input type="submit" name="button" value="sign up"/></a>
+					<a href="http://localhost:5000/result"><input type="submit" id="submit" name="button" onclick=check(); value="sign up"/></a>
 				</div>
 
 			</form>

@@ -14,12 +14,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<script type="text/javascript">
 	function validate(){
 		var state = document.getElementById("state");
-		var District = document.getElementById("District");
-		var Crop_Type = document.getElementById("Crop_Type");
-		var Year = document.getElementById("Year");
-		var Month = document.getElementById("Month");
-		if(state.value.trim()==''|| District.value.trim()=='' || Crop_Type.value.trim()=='' || Year.value.trim()=='' || Month.value.trim()==''){
-			alert("Cannot be blank");
+		var District1 = document.getElementById("District1");
+		var Crop_Type = document.getElementById("Crop");
+		var Year1 = document.getElementById("Year1");
+		var Month1 = document.getElementById("Month1");
+		if(state.value.trim()==''|| District1.value.trim()=='' || Crop.value.trim()=='' || Year1.value.trim()=='' || Month1.value.trim()==''){
+			alert("Fill the missing values");
 			return false;
 		}else{ true }
 	}
@@ -53,52 +53,52 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<!-- <div class="clear"></div> class="agile-email"-->
 				<div class="form-control" style="margin-top: 20px; background-color: transparent; border: none;">
 					<label style="color: cornsilk;">District</label>
-					<input type="text" name="District" id="District" list="District">
+					<input type="text" name="District" id="District1" list="District">
 					<small style="visibility: hidden;">Error Message</small>
 					<datalist id="District">
-						<option>Akola</option>
-						<option >Amravati</option>
-						<option>Buldhana</option>
-						<option>Yavatmal</option>
-						<option>Washim</option>
-						<option>Aurangabad</option>
-						<option>Beed</option>
-						<option>Jalna</option>
-						<option>Osmanabad</option>
-						<option>Nanded</option>
-						<option>Latur</option>
-						<option>Parbhani</option>
-						<option>Hingoli</option>
-						<option>Mumbai city</option>
+						<option>Ahmednagar </option>
+						<option >Akola </option>
+						<option>Amravati </option>
+						<option>Aurangabad </option>
+						<option>Beed </option>
+						<option>Bhandara </option>
+						<option>Buldhana </option>
+						<option>Chandrapur </option>
+						<option>Dhule </option>
+						<option>Gadchiroli </option>
+						<option>Gondia </option>
+						<option>Hingoli </option>
+						<option>Jalgaon </option>
+						<option>Jalna </option>
+						<option>Kolhapur </option>
+						<option>Latur </option>
+						<option>Mumbai City</option>
 						<option>Mumbai Suburban</option>
-						<option>Thane</option>
-						<option>Palghar</option>
-						<option>Raigad</option>
-						<option>Ratnagiri</option>
-						<option>Sindhudurg</option>
-						<option>Bhandara</option>
-						<option>Chandrapur</option>
-						<option>Gadchiroli</option>
-						<option>Gondia</option>
-						<option>Nagpur</option>
-						<option>Wardha</option>
-						<option>Dhule</option>
-						<option>Jalgaon</option>
-						<option>Nandurbar</option>
-						<option>Nashik</option>
-						<option>Ahmednagar</option>
-						<option>Kolhapur</option>
-						<option>Pune</option>
-						<option>Sangli</option>
-						<option>Satara</option>
-						<option>Kolhapur</option>
+						<option>Nagpur </option>
+						<option>Nanded </option>
+						<option>Nandurbar </option>
+						<option>Nashik </option>
+						<option>Osmanabad </option>
+						<option>Palghar </option>
+						<option>Parbhani </option>
+						<option>Pune </option>
+						<option>Raigad </option>
+						<option>Ratnagiri </option>
+						<option>Sangli </option>
+						<option>Satara </option>
+						<option>Sindhudurg </option>
+						<option>Solapur </option>
+						<option>Thane </option>
+						<option>Wardha </option>
+						<option>Washim </option>
+						<option>Yavatmal</option>
 					</datalist>
 				</div>
 
 				<!-- <div class="clear"></div> -->
 				<div class="form-control" style="margin-top: 20px; background-color: transparent; border: none;">
 					<label style="color: cornsilk;">Crop</label>
-					<input type="text" name="Crop_Type" id="Crop_Type" list="Crop_Type">
+					<input type="text" name="Crop_Type" id="Crop" list="Crop_Type">
 					<small style="visibility: hidden;">Error Message</small>
 					<datalist id="Crop_Type">
 						<option>Arhar</option>
@@ -130,7 +130,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<!-- <div class="clear"></div> -->
 				<div class="form-control" style="margin-top: 20px; background-color: transparent; border: none;">
 					<label style="color: cornsilk;">Year</label>
-					<input type="number" min="2012" max="2023" name="Year" id="Year" list="Year">
+					<input type="number" min="2012" max="2023" name="Year" id="Year1" list="Year">
 					<small style="visibility: hidden;">Error Message</small>
 					<datalist id="Year">
 						<!-- <option hidden>Please select</option> -->
@@ -167,7 +167,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div> -->
 				<div class="form-control" style="margin-top: 20px; background-color: transparent; border: none;">
 					<label style="color: cornsilk;">Month (in number)</label>
-					<input type="number" id="Month" name="Month" min="1" max="12" list="Month">
+					<input type="number" id="Month1" name="Month" min="1" max="12" list="Month">
 					<small style="visibility: hidden;">Error Message</small>
 					<datalist id="Month">
 						<option >1</option>
